@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+  background-color: #ec4cd2;
+}
+
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #dbf024;
+}
+
+.main {
+  grid-area: main;
+  background-color: #26d0ee;
+}
+
+.widget1{
+  grid-area: widget1;
+  background-color: #4161b8;
+  font-size: 25px;
+}
+.widget2{
+  grid-area: widget2;
+  background-color: #da240c;
+  font-size: 25px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #8c96a0;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header  header header"  50px
+    "main  main   sidebar" 500px
+    "widget1 widget2 sidebar" auto
+    "footer  footer footer"  50px /
+    auto    auto   200px;
+}
